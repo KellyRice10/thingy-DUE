@@ -1,3 +1,4 @@
+import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -17,7 +18,14 @@ public class Kelly_Elizabeth_Game extends JComponent implements MouseListener{
 		for (int i = 0; i< board.length; i++){
 			board[i] = (int)(Math.random() * 10);
 			piecesLeft += board[i];
+		}
 	}
+	
+	public void paintComponent(Graphics g){
+		g.drawString("Player 1: " + player1, 10, 20);
+		g.drawString("Player 2: " + player2, 10, 20);
+	}
+	
 
 	public static void main(String[] args) {
 
